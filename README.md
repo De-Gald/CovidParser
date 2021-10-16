@@ -21,7 +21,7 @@ QR код извлекается из указанного документа PD
 
 <h2> Запуск программы </h2>
 
-pip install -r requirements.txt
+pip install -r requirements.txt <br>
 python main.py covid_certifivate_path output_file_path
 
 <h2> Запуск программы в Docker </h2>
