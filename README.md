@@ -21,11 +21,15 @@ The drug <br>
 
 <h2> Running the program </h2>
 
-pip install -r requirements.txt <br>
+```shell
+pip install -r requirements.txt
 python main.py covid_certificate_path output_file_path
+```
 
 <h2> Running the program in Docker </h2>
 
 The following commands should be executed: <br>
-docker build --tag covid-parser . <br>
+```shell
+docker build --tag covid-parser .
 docker run -e v1='covid_certificate_path' -e v2='output_file_path' covid-parser
+```
