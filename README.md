@@ -1,31 +1,31 @@
-<H1> Приложение для проверки действительности Сертификата вакцинации 
-и извлечения данных
-</H1> 
+<H1> Application to verify the validity of the Vaccination Certificate
+and extract data
+</H1>
 
-<H2> Проверка подлинности </H2>
-QR код извлекается из указанного документа PDF, затем полученные данные с URL, указанном 
-в QR-коде, сравниваются с персональными данными, указанными в PDF сертификате.
+<H2> Authentication </H2>
+The QR code is extracted from the PDF document, then the data from URL specified
+in the QR code is compared with the personal data stated in the PDF certificate.
 
-<H2> Извлечение данных </H2>
-Данные, полученные из PDF сертификата вакцинации, записываются
-в указанный файл в cp1251 кодировке. <br><br>
-Данные записываются в следующем виде, одно значение на строку: <br>
-Фамилия <br>
-Имя <br>
-Отчество <br>
-Дата рождения <br>
-Пол <br>
-Документ удостоверяющий личность <br>
-Дата введения последней вакцины <br>
-Препарат <br>
+<H2> Data Extraction </H2>
+The data obtained from the PDF of the vaccination certificate is written
+to a file with cp1251 encoding. <br><br>
+The data is written in the following form, one value per line: <br>
+Last name <br>
+Name <br>
+Patronymic <br>
+Date of birth <br>
+Gender <br>
+Identity document <br>
+Date of introduction of the last vaccine <br>
+The drug <br>
 
-<h2> Запуск программы </h2>
+<h2> Running the program </h2>
 
 pip install -r requirements.txt <br>
-python main.py covid_certifiсate_path output_file_path
+python main.py covid_certificate_path output_file_path
 
-<h2> Запуск программы в Docker </h2>
+<h2> Running the program in Docker </h2>
 
-Необходимо выполнить следующие комманды: <br>
+The following commands should be executed: <br>
 docker build --tag covid-parser . <br>
-docker run -e v1='covid_certifiсate_path' -e v2='output_file_path' covid-parser
+docker run -e v1='covid_certificate_path' -e v2='output_file_path' covid-parser
